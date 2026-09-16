@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/CloudWithVarJosh/argocd-setup.git
+    repoURL: https://github.com/emzm17/argocd-setup.git
     targetRevision: HEAD
     path: app1-config/config
   destination:
