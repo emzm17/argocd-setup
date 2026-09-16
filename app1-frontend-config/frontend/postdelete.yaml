@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app1-postdelete-cleanup
+  annotations:
+    argocd.argoproj.io/hook: PostDelete
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: cleanup
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              echo "Application deleted. Cleaning external resources..."
+              echo "Removing database entries"
+              sleep 5
+              echo "Cleanup completed"
