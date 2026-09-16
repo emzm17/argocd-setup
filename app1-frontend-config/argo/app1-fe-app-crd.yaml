@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/emzm17/argocd-setup.git
     targetRevision: HEAD
-    path: argocd-setup/frontend
+    path: argocd-setup/app1-frontend-config/frontend
   destination:
     server: https://kubernetes.default.svc
     namespace: app1-ns
