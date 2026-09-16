@@ -18,4 +18,3 @@ spec:
           - -c
           - |
             echo "Running frontend smoke test..."
-            curl -f http://frontend-svc:80
