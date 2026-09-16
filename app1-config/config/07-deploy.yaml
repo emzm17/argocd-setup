@@ -15,7 +15,7 @@ spec:
       labels:
         app: app1
     spec:
-      serviceAccountName: app2-sa
+      serviceAccountName: app1-sa
       containers:
         - name: nginx
           image: nginx:1.25
